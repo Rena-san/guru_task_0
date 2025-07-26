@@ -1,0 +1,1 @@
+# guru_task_0
