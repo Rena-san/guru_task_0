@@ -25,16 +25,6 @@ def user_registration(user_data):
 
     return response
 
-def get_user_info(user_id):
-    url = f"{Api.HOST}/api/users/{user_id}"
-
-    logging.info(f"POST->URL::{url}")
-
-    response = requests.get(url)
-
-    logging.info(f"RESPONSE::{response}")
-
-    return response
 
 def user_login(user_data):
     url = f"{Api.HOST}/api/login"
@@ -49,23 +39,11 @@ def user_login(user_data):
         "password": user_data.password,
     }
 
-
     logging.info(f"POST->URL::{url}")
     logging.info(f"POST->BODY::{body}")
 
     response = requests.post(url, headers=headers, json=body)
 
     logging.info(f"RESPONSE::{response.json()}")
-
-    return response
-
-def user_logout(user_id):
-    url = f"{Api.HOST}/api/logout"
-
-    logging.info(f"POST->URL::{url}")
-
-    response = requests.post(url)
-
-    logging.info(f"RESPONSE::{response}")
 
     return response
