@@ -1,0 +1,5 @@
+pytest
+pydantic
+requests
+allure-pytest
+fastapi
